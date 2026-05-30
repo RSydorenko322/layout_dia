@@ -1,0 +1,23 @@
+.menu {
+  overflow: auto;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  background-color: #1e293b;
+  font-weight: $font-bold;
+
+  @include header-padding-y;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__icon-close {
+    background-image: url(../images/icons/dia-icon-close.png);
+
+    @include icons-style;
+  }
+}

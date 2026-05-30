@@ -1,0 +1,29 @@
+.about {
+  background-color: $background-color-light-blue;
+
+  &__wrapper {
+    max-width: 716px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    color: $c-title;
+    font-weight: $font-half-bold;
+    line-height: 150%;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+
+    @include on-tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    color: $c-text;
+    text-align: center;
+    font-size: 24px;
+    font-weight: $font-half-bold;
+    font-family: 'Open Sans', sans-serif;
+  }
+}

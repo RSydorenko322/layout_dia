@@ -1,0 +1,42 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo-img {
+    display: block;
+    width: 46px;
+    height: 28px;
+  }
+
+  &__burger-button {
+    background-image: url(../images/icons/dia-menu.png);
+
+    @include icons-style;
+
+    @include on-small-desk {
+      display: none;
+    }
+  }
+
+  &__action {
+    color: $c-white;
+    text-decoration: none;
+    font-weight: $font-bold;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid $c-blue;
+    padding-bottom: 8px;
+    width: fit-content;
+  }
+}

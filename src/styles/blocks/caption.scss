@@ -1,0 +1,52 @@
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__sliders {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: normal;
+  }
+
+  &__slider {
+    width: 32px;
+    height: 32px;
+    background-color: $c-white;
+    border-radius: 50%;
+    color: #253757;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    font-weight: $font-bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: text-shadow $effectDuration;
+
+    &:hover {
+      text-shadow: 0 2px 5px #253757;
+    }
+  }
+}

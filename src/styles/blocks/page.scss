@@ -1,0 +1,43 @@
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.page {
+  scroll-behavior: smooth;
+
+  &__body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f6fa;
+    color: $c-white;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: all $effectDuration;
+
+    &:target {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden; /* not to scroll the page */
+  }
+}

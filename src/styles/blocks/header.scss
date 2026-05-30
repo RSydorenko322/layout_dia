@@ -1,0 +1,126 @@
+.header {
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $background-color-dark;
+  min-height: 100vh;
+
+  @include header-padding-y;
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: space-between;
+
+    margin-top: 48px;
+
+    @include on-tablet {
+      margin-top: 56px;
+      gap: 147px;
+    }
+
+    @include on-small-desk {
+      margin-top: 164px;
+
+      flex-direction: row;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    @include on-small-desk {
+      flex: 1;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    @include on-small-desk {
+      gap: 32px;
+    }
+  }
+
+  &__title {
+    padding: 0;
+
+    font-weight: $font-bold;
+    font-size: 52px;
+    letter-spacing: -2px;
+    line-height: 120%;
+
+    @include on-tablet {
+      font-size: 64px;
+      line-height: 68px;
+    }
+  }
+
+  &__slogan {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  &__button {
+    @include button-style;
+  }
+
+  &__right {
+    @include on-small-desk {
+      flex: 1;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    margin-inline: calc(50% - 50vw);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 390px;
+    flex-shrink: 0;
+
+    @include on-small-desk {
+      margin-inline-start: 0;
+      height: 680px;
+      margin-top: -150px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__caption {
+    position: absolute;
+    left: 20px;
+    bottom: 24px;
+
+    @include on-tablet {
+      left: 41px;
+      bottom: 32px;
+    }
+
+    @include on-small-desk {
+      left: 78px;
+      bottom: 48px;
+    }
+
+    @include on-design {
+      left: 48px;
+    }
+  }
+}
