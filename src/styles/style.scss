@@ -1,9 +1,6 @@
-@import 'utils/_vars';
-@import 'utils/_mixins';
-@import 'utils/_extends';
+@import 'utils/vars';
+@import 'utils/mixins';
 @import 'blocks/page';
-@import 'fonts';
-@import 'typography';
 @import 'blocks/top-bar';
 @import 'blocks/header';
 @import 'blocks/nav';
@@ -11,7 +8,6 @@
 @import 'blocks/menu';
 @import 'blocks/caption';
 @import 'blocks/about';
-@import 'blocks/main';
 @import 'blocks/section';
 @import 'blocks/expertise';
 @import 'blocks/services';
