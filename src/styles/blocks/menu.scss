@@ -7,12 +7,16 @@
   background-color: #1e293b;
   font-weight: $font-bold;
 
-  @include header-padding-y;
+  padding-top: 50px;
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    position: sticky; /* to keep cross always visible */
+    top: 0;
+    z-index: 1;
   }
 
   &__icon-close {

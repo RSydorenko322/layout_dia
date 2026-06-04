@@ -1,7 +1,15 @@
 .section {
   padding-block: 120px;
 
-  @include on-tablet {
+  @include on-small-desk {
     padding-block: 148px;
+  }
+
+  &__title {
+    color: $c-title;
+    font-weight: $font-half-bold;
+    line-height: 130%;
+    font-size: 32px;
+    margin-bottom: 24px;
   }
 }
