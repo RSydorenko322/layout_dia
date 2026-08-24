@@ -13,30 +13,35 @@ h4 {
   }
 
   &__body {
-    font-family: Poppins, sans-serif;
-    background-color: #f2f6fa;
-    color: $c-white;
-    margin: 0;
+    overflow-x: hidden;
+
     min-width: 320px;
     min-height: 100vh;
-    overflow-x: hidden;
+    margin: 0;
+
+    font-family: Poppins, sans-serif;
+    color: $c-white;
+
+    background-color: #f2f6fa;
   }
 
   &__menu {
+    pointer-events: none;
+
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
+    transform: translateY(-100%);
 
     opacity: 0;
-    transform: translateY(-100%);
-    pointer-events: none;
+
     transition: all $effectDuration;
 
     &:target {
-      opacity: 1;
-      transform: translateY(0);
       pointer-events: all;
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

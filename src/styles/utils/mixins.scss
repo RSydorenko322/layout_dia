@@ -10,21 +10,25 @@
     @content;
   }
 }
+
 @mixin on-small-desk {
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-min-width) {
     @content;
   }
 }
+
 @mixin on-desk {
   @media (min-width: 1280px) {
     @content;
   }
 }
+
 @mixin on-design {
   @media (min-width: 1600px) {
     @content;
   }
 }
+
 @mixin on-large-screen {
   @media (min-width: 2560px) {
     @content;
@@ -41,28 +45,34 @@
 
 @mixin icons-style {
   display: block;
+
   width: 24px;
   height: 24px;
-  background-size: cover;
+
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 @mixin button-style {
-  box-sizing: border-box;
+  cursor: pointer;
+
   display: block;
-  color: $c-white;
+
+  box-sizing: border-box;
   width: 280px;
   height: 50px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 8px;
-  background-color: $c-blue;
-  text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 0;
   border: 1px solid transparent;
-  cursor: pointer;
+  border-radius: 8px;
+
+  font-size: 15px;
+  line-height: 48px;
+  color: $c-white;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+
+  background-color: $c-blue;
 
   transition:
     background-color $effectDuration,
@@ -74,9 +84,9 @@
   }
 
   &:hover {
-    background-color: $c-white;
-    color: $c-blue;
     border: 1px solid $c-blue;
+    color: $c-blue;
+    background-color: $c-white;
   }
 }
 
@@ -87,13 +97,14 @@
 }
 
 @mixin section-name-gray {
-  color: #c0cdd7;
-  font-weight: $font-bold;
-  font-size: 13px;
-  line-height: 100%;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   margin-bottom: 16px;
+
+  font-size: 13px;
+  font-weight: $font-bold;
+  line-height: 100%;
+  color: #c0cdd7;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 @mixin blocks-styling-shadow {
@@ -103,30 +114,38 @@
 
 @mixin visually-hidden {
   position: absolute;
+
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
   border: 0;
+
+  white-space: nowrap;
+
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-  white-space: nowrap;
 }
 
 @mixin link-underline-style {
   position: relative;
 
   &::after {
-    position: absolute;
-    display: block;
     content: '';
+
+    position: absolute;
     bottom: -8px;
-    height: 1px;
+    transform: scale(0);
+
+    display: block;
+
     width: 100%;
+    height: 1px;
+
     background-color: $c-white;
 
-    transform: scale(0);
     transition: transform $effectDuration;
   }
 

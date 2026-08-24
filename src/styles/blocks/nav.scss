@@ -8,9 +8,9 @@
       @include on-small-desk {
         display: flex;
         flex-direction: row;
+        gap: 48px;
         align-items: center;
         justify-content: center;
-        gap: 48px;
       }
     }
 
@@ -32,21 +32,21 @@
     &--menu {
       display: flex;
       flex-direction: column;
+      gap: 48px;
       align-items: flex-start;
       justify-content: center;
-      gap: 48px;
     }
   }
 
   &__link {
     padding-block: 5px;
+
+    font-size: 13px;
+    font-weight: $font-bold;
+    line-height: 150%;
+    color: $c-white;
     text-decoration: none;
     text-transform: uppercase;
-    color: $c-white;
-
-    font-weight: $font-bold;
-    font-size: 13px;
-    line-height: 150%;
     letter-spacing: 3px;
 
     @include link-underline-style;

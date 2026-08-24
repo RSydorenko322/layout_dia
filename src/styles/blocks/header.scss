@@ -1,9 +1,12 @@
 .header {
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: $background-color-dark;
-  min-height: 100vh;
   position: relative;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  background-color: $background-color-dark;
 
   @include header-padding-y;
 
@@ -11,18 +14,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     margin-top: 48px;
 
     @include on-tablet {
-      margin-top: 56px;
       gap: 147px;
+      margin-top: 56px;
     }
 
     @include on-small-desk {
-      margin-top: 164px;
-
       flex-direction: row;
+      margin-top: 164px;
     }
   }
 
@@ -53,10 +54,10 @@
   &__title {
     padding: 0;
 
-    font-weight: $font-bold;
     font-size: 52px;
-    letter-spacing: -2px;
+    font-weight: $font-bold;
     line-height: 120%;
+    letter-spacing: -2px;
 
     @include on-tablet {
       font-size: 64px;
@@ -65,8 +66,8 @@
   }
 
   &__slogan {
-    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
   }
 
   &__button {
@@ -81,25 +82,27 @@
 
   &__img-wrapper {
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
 
-    border-radius: 30px;
     overflow: hidden;
-    height: 30%;
     flex-shrink: 0;
 
+    height: 30%;
+    border-radius: 30px;
+
     @include on-small-desk {
-      margin-inline-start: 0;
-      height: 80%;
-      left: 50%;
       bottom: 0;
+      left: 50%;
+      height: 80%;
+      margin-inline-start: 0;
     }
   }
 
   &__img {
     display: block;
+
     width: 100%;
     height: 100%;
 
@@ -109,17 +112,17 @@
 
   &__caption {
     position: absolute;
-    left: 20px;
     bottom: 24px;
+    left: 20px;
 
     @include on-tablet {
-      left: 41px;
       bottom: 32px;
+      left: 41px;
     }
 
     @include on-small-desk {
-      left: 78px;
       bottom: 48px;
+      left: 78px;
     }
 
     @include on-design {

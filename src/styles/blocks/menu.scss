@@ -1,22 +1,24 @@
 .menu {
   overflow: auto;
+
   box-sizing: border-box;
-  height: 100vh;
   width: 100vw;
   min-width: 320px;
-  background-color: #1e293b;
-  font-weight: $font-bold;
-
+  height: 100vh;
   padding-top: 50px;
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  font-weight: $font-bold;
 
+  background-color: #1e293b;
+
+  &__content {
     position: sticky; /* to keep cross always visible */
-    top: 0;
     z-index: 1;
+    top: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   &__icon-close {

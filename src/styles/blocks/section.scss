@@ -6,10 +6,11 @@
   }
 
   &__title {
-    color: $c-title;
+    margin-bottom: 24px;
+
+    font-size: 32px;
     font-weight: $font-half-bold;
     line-height: 130%;
-    font-size: 32px;
-    margin-bottom: 24px;
+    color: $c-title;
   }
 }

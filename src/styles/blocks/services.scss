@@ -19,8 +19,8 @@
 
   &__text-content {
     @include on-tablet {
-      grid-column: 1 / 2;
       transform: translateY(50%);
+      grid-column: 1 / 2;
     }
 
     @include on-small-desk {
@@ -34,9 +34,9 @@
     gap: 24px;
 
     @include on-tablet {
+      grid-column: 1 / -1;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
-      grid-column: 1 / -1;
     }
 
     @include on-small-desk {
@@ -45,8 +45,8 @@
   }
 
   &__category {
-    background-color: $c-white;
     padding: 32px;
+    background-color: $c-white;
 
     @include blocks-styling-shadow;
 
@@ -66,20 +66,20 @@
   }
 
   &__title {
-    color: $c-title;
+    margin-bottom: 24px;
+
+    font-size: 32px;
     font-weight: $font-half-bold;
     line-height: 130%;
-    font-size: 32px;
-
-    margin-bottom: 24px;
+    color: $c-title;
   }
 
   &__text {
-    color: $c-text;
     font-family: 'Open Sans', sans-serif;
-    font-weight: $font-normal;
     font-size: 14px;
+    font-weight: $font-normal;
     line-height: 150%;
+    color: $c-text;
 
     @include on-tablet {
       margin-bottom: 56px;
@@ -87,15 +87,16 @@
   }
 
   &__category-num {
-    background-color: rgba($color: $c-blue, $alpha: 0.1);
-    color: $c-blue;
     width: fit-content;
+    margin-bottom: 24px;
     padding: 2px 12px;
     border-radius: 23px;
 
-    font-weight: $font-half-bold;
     font-size: 13px;
-    margin-bottom: 24px;
+    font-weight: $font-half-bold;
+    color: $c-blue;
+
+    background-color: rgba($color: $c-blue, $alpha: 0.1);
   }
 
   &__categories-list {
@@ -105,32 +106,35 @@
   }
 
   &__category-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: $font-half-bold;
     color: $c-text;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: $font-half-bold;
-    font-size: 13px;
   }
 
   &__go-further-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 16px;
+    align-items: center;
   }
 
   &__go-further-button {
-    background-color: $c-blue;
-    color: $c-white;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border-radius: 50%;
+
+    color: $c-white;
+    text-decoration: none;
+
+    background-color: $c-blue;
+
     transition: transform $effectDuration;
 
     &:hover {
@@ -139,8 +143,8 @@
   }
 
   &__go-further-text {
-    color: #334563;
     font-weight: $font-half-bold;
+    color: #334563;
     text-decoration: none;
   }
 }

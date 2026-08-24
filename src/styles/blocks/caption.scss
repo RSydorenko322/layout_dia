@@ -15,34 +15,37 @@
   }
 
   &__label {
-    text-transform: uppercase;
-    font-weight: $font-bold;
     font-size: 13px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
     letter-spacing: 3px;
   }
 
   &__text {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    line-height: 140%;
     font-weight: normal;
+    line-height: 140%;
   }
 
   &__slider {
-    width: 32px;
-    height: 32px;
-    background-color: $c-white;
-    border-radius: 50%;
-    color: #253757;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    width: 32px;
+    height: 32px;
     border: none;
-    font-weight: $font-bold;
+    border-radius: 50%;
+
     font-size: 12px;
-    cursor: pointer;
+    font-weight: $font-bold;
+    color: #253757;
+
+    background-color: $c-white;
+
     transition: text-shadow $effectDuration;
 
     &:hover {

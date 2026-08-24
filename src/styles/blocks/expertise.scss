@@ -1,18 +1,18 @@
 .expertise {
+  padding-block: 72px;
   border-radius: 30px;
   background-color: $c-white;
-  padding-block: 72px;
 
   @include on-tablet {
     padding-block: 128px;
   }
 
   &__title {
-    color: $c-title;
-    font-weight: $font-half-bold;
-    font-size: 44px;
-
     margin-bottom: 56px;
+
+    font-size: 44px;
+    font-weight: $font-half-bold;
+    color: $c-title;
     text-align: center;
 
     @include on-tablet {
@@ -23,8 +23,8 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 56px;
+    align-items: center;
 
     @include on-small-desk {
       flex-direction: row;
@@ -39,27 +39,27 @@
   }
 
   &__article-name {
-    color: $c-title;
-    font-weight: $font-half-bold;
     font-size: 20px;
+    font-weight: $font-half-bold;
     line-height: 140%;
+    color: $c-title;
   }
 
   &__article-text {
-    color: $c-text;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: $font-normal;
-    font-size: 14px;
-    line-height: 150%;
-    text-align: center;
     max-width: 362px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: $font-normal;
+    line-height: 150%;
+    color: $c-text;
+    text-align: center;
   }
 
   &__img-link {
     display: block;
-    height: 166px;
     width: 166px;
-
+    height: 166px;
     margin-bottom: 32px;
 
     @include on-small-desk {
@@ -69,8 +69,10 @@
 
   &__img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
   }
@@ -78,7 +80,7 @@
   &__text-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 16px;
+    align-items: center;
   }
 }
